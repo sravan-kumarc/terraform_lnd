@@ -43,6 +43,9 @@ resource "aws_route_table" "zinc-rt" {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.zinc-igw.id
   }
+  tags = {
+    Name = "zinc-rt"
+  }
 }
 resource "aws_route_table_association" "zinc-rt-assoc1" {
   subnet_id      = aws_subnet.zinc-pb-subnet1.id

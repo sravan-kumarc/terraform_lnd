@@ -1,0 +1,108 @@
+# aws_instance.imported_instance:
+resource "aws_instance" "imported_instance" {
+    ami                                  = "ami-045443a70fafb8bbc"
+    arn                                  = "arn:aws:ec2:ap-south-1:372482645607:instance/i-02d0fa4922b35b9e0"
+    associate_public_ip_address          = true
+    availability_zone                    = "ap-south-1a"
+    disable_api_stop                     = false
+    disable_api_termination              = false
+    ebs_optimized                        = true
+    force_destroy                        = false
+    get_password_data                    = false
+    hibernation                          = false
+    host_id                              = [90mnull[0m[0m
+    iam_instance_profile                 = [90mnull[0m[0m
+    id                                   = "i-02d0fa4922b35b9e0"
+    instance_initiated_shutdown_behavior = "stop"
+    instance_lifecycle                   = [90mnull[0m[0m
+    instance_state                       = "running"
+    instance_type                        = "t3.micro"
+    ipv6_address_count                   = 0
+    ipv6_addresses                       = []
+    key_name                             = "mumbaiKP"
+    monitoring                           = false
+    outpost_arn                          = [90mnull[0m[0m
+    password_data                        = [90mnull[0m[0m
+    placement_group                      = [90mnull[0m[0m
+    placement_group_id                   = [90mnull[0m[0m
+    placement_partition_number           = 0
+    primary_network_interface_id         = "eni-0aa7fb60b161ba0a9"
+    private_dns                          = "ip-172-31-39-73.ap-south-1.compute.internal"
+    private_ip                           = "172.31.39.73"
+    public_dns                           = "ec2-13-232-121-247.ap-south-1.compute.amazonaws.com"
+    public_ip                            = "13.232.121.247"
+    region                               = "ap-south-1"
+    secondary_private_ips                = []
+    security_groups                      = [
+        "default",
+    ]
+    source_dest_check                    = true
+    spot_instance_request_id             = [90mnull[0m[0m
+    subnet_id                            = "subnet-0e63891417c5889e3"
+    tags                                 = {
+        "Name" = "unixServer"
+    }
+    tags_all                             = {
+        "Name" = "unixServer"
+    }
+    tenancy                              = "default"
+    vpc_security_group_ids               = [
+        "sg-09c20659603556222",
+    ]
+
+    capacity_reservation_specification {
+        capacity_reservation_preference = "open"
+    }
+
+    cpu_options {
+        amd_sev_snp           = [90mnull[0m[0m
+        core_count            = 1
+        nested_virtualization = [90mnull[0m[0m
+        threads_per_core      = 2
+    }
+
+    credit_specification {
+        cpu_credits = "unlimited"
+    }
+
+    enclave_options {
+        enabled = false
+    }
+
+    maintenance_options {
+        auto_recovery = "default"
+    }
+
+    metadata_options {
+        http_endpoint               = "enabled"
+        http_protocol_ipv6          = "disabled"
+        http_put_response_hop_limit = 2
+        http_tokens                 = "required"
+        instance_metadata_tags      = "disabled"
+    }
+
+    primary_network_interface {
+        delete_on_termination = true
+        network_interface_id  = "eni-0aa7fb60b161ba0a9"
+    }
+
+    private_dns_name_options {
+        enable_resource_name_dns_a_record    = false
+        enable_resource_name_dns_aaaa_record = false
+        hostname_type                        = "ip-name"
+    }
+
+    root_block_device {
+        delete_on_termination = true
+        device_name           = "/dev/xvda"
+        encrypted             = false
+        iops                  = 3000
+        kms_key_id            = [90mnull[0m[0m
+        tags                  = {}
+        tags_all              = {}
+        throughput            = 125
+        volume_id             = "vol-0fc8430ccb7406b9e"
+        volume_size           = 8
+        volume_type           = "gp3"
+    }
+}

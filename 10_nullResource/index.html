@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Terraform Live Deploy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      text-align: center;
+      padding-top: 80px;
+    }
+    .card {
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 12px;
+      display: inline-block;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    h1 {
+      color: #38bdf8;
+    }
+    .highlight {
+      color: #22c55e;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>🚀 Terraform Deployment to test null_resource</h1>
+    <p>This page was deployed using <span class="highlight">null_resource</span></p>
+    <p>Server: <span class="highlight" id="hostname"></span></p>
+    <p>Last Updated: <span class="highlight" id="time"></span></p>
+  </div>
+
+  <script>
+    document.getElementById("hostname").innerText = window.location.hostname;
+    document.getElementById("time").innerText = new Date().toLocaleString();
+  </script>
+
+</body>
+</html>
